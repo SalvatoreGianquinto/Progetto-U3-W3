@@ -7,6 +7,7 @@ import NavbarSwitcher from "./components/NavbarSwitcher"
 import Layout from "./components/Layout"
 import Preferiti from "./components/Preferiti"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Player from "./components/Player"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <NuoveUscite />
               <HomeLink />
               <MyFooter />
+              <Player />
             </Layout>
           }
         />

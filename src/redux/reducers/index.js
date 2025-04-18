@@ -1,6 +1,7 @@
 const initialState = {
   nuoveUscite: [],
   preferiti: [],
+  canzoneCorrente: null,
 }
 
 const mainReducer = (state = initialState, action) => {
@@ -18,6 +19,8 @@ const mainReducer = (state = initialState, action) => {
           (item) => item.id !== action.payload.id
         ),
       }
+    case "SET_CANZONE_CORRENTE":
+      return { ...state, canzoneCorrente: action.payload }
 
     default:
       return state

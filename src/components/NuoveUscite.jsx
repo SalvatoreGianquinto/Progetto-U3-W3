@@ -5,6 +5,7 @@ import {
   aggiungiAiPreferiti,
   rimuoviDaiPreferiti,
   setNuoveUscite,
+  setCanzoneCorrente,
 } from "../redux/action"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { Link } from "react-router-dom"
@@ -40,6 +41,10 @@ const NuoveUscite = () => {
     }
   }
 
+  const handleCanzoneSelezionata = (brano) => {
+    dispatch(setCanzoneCorrente(brano)) // Aggiungi la canzone selezionata allo store
+  }
+
   return (
     <Container fluid className="ms-1">
       <h2 className="my-4 text-light">Nuove Uscite</h2>
@@ -55,7 +60,10 @@ const NuoveUscite = () => {
               lg={2}
               className="me-lg-3 mb-3 d-block d-sm-none"
             >
-              <Card className="h-100">
+              <Card
+                className="h-100"
+                onClick={() => handleCanzoneSelezionata(item)}
+              >
                 <Card.Img variant="top" src={item.album.cover_medium} />
                 <Card.Body className="bg-dark">
                   <div className="d-flex justify-content-between align-items-center">
@@ -94,7 +102,10 @@ const NuoveUscite = () => {
               lg={2}
               className="me-lg-3 mb-3 d-none d-sm-block"
             >
-              <Card className="h-100">
+              <Card
+                className="h-100"
+                onClick={() => handleCanzoneSelezionata(item)}
+              >
                 <Card.Img variant="top" src={item.album.cover_medium} />
                 <Card.Body className="bg-dark">
                   <div className="d-flex justify-content-between align-items-center">

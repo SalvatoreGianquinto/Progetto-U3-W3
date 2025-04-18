@@ -12,3 +12,7 @@ export const rimuoviDaiPreferiti = (brano) => ({
   type: "RIMUOVI_DAI_PREFERITI",
   payload: brano,
 })
+export const setCanzoneCorrente = (brano) => ({
+  type: "SET_CANZONE_CORRENTE",
+  payload: brano,
+})
