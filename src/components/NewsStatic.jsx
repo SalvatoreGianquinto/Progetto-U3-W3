@@ -3,10 +3,9 @@ import { Col, Container, Row } from "react-bootstrap"
 const NewsStatic = function () {
   return (
     <Container fluid className="ms-1">
-      <h1 className="text-light border-0 border-bottom border-secondary-subtle">
+      <h1 className="text-light border-0 border-bottom border-secondary-subtle my-3">
         <strong>Novità</strong>
       </h1>
-      <h2 className="text-light mb-3">In evidenza</h2>
 
       <div className="overflow-auto d-lg-none">
         <div className="d-flex gap-3">
@@ -50,7 +49,7 @@ const NewsStatic = function () {
         </div>
         <div className="text-light">
           <h6>Nuova stazione radio</h6>
-          <p>Rilassati, al resto pensiamo noi. Ascolta Apple Music Chill</p>
+          <p>Ecco la nuova casa della musica Latina</p>
           <img
             src="../assets/images/1b.png"
             className="img-fluid rounded"
